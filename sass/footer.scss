@@ -1,0 +1,123 @@
+.container_footer{
+    display: flex;
+    align-items: center;
+    background: $very_dark_violet;
+
+    
+    .card_footer{
+        width: 100%;
+        padding: 6%;
+
+        .list_footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style: none;
+
+            li{
+
+                p{
+                    font: 500 14px 'Poppins';
+                    color: $grayish_violet;
+                    margin: 5px 0;
+                }
+                h4{
+                    font: 700 18px 'Poppins';
+                    margin-bottom: 15px;
+                    color: $white;
+                }
+
+                ul{
+                    list-style: none;
+                }
+                //estilo das imgs do footer
+                .list_redes{
+                    display: flex;
+                    list-style: none;
+
+                    li{
+
+                        img{
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//estilizando o author..
+
+.container_author{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    background: $very_dark_violet;
+    color: $gray;
+    font: 800 18px 'Poppins';
+
+    a{
+        color: $white;
+        text-decoration: none;
+
+        &:hover{
+            color: $red;
+        }
+        &:visited{
+            color: aqua;
+        }
+
+    }
+}
+
+@media(max-width: 850px){
+
+    .container_footer{
+
+        
+        .card_footer{
+            width: 100%;
+            
+    
+            .list_footer{
+                justify-content: center;
+                align-items: center;
+                flex-flow: column nowrap;
+    
+                li{
+    
+
+                    h4{
+                        margin-bottom: 10px;
+                    }
+    
+                    ul{
+                        list-style: none;
+                        //acrecentei o display flex aqui para que eu consiga alinhar as listas uma embaixo da outra
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 20px 0;
+                    }
+                    //estilo das imgs do footer
+                    .list_redes{
+                        display: flex;
+                        //acrecentei o row para que as imgs fique uma do lado da outra
+                        flex-direction: row;
+    
+                        li{
+    
+                            img{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

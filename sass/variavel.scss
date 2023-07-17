@@ -1,0 +1,42 @@
+//fontes utilizada no projeto
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
+
+//font-family: 'Poppins', sans-serif;
+
+//utilizadas é 500 e 700 bold
+
+//primary
+
+$cyan: hsl(180, 66%, 49%);
+$dark_violet: hsl(257, 27%, 26%);
+
+//cor decundaria
+
+$red: hsl(0, 87%, 67%);
+
+//cor natural
+
+$gray: hsla(0, 2%, 89%, 0.87);
+$grayish_violet: hsl(257, 7%, 63%);
+$very_dark_blue: hsl(255, 11%, 22%);
+$very_dark_violet: hsl(260, 8%, 14%);
+
+$white: hsl(0, 0%, 100%);
+
+//essa class é global para todos os links terá o mesmo efeito e estilo caso queira mecher no estilo
+//do sign ou os outros links que estão no site aqui é a chave
+
+//a cor da font do sign está no header
+.efect_log{
+
+    background: $cyan;
+    color: $white;
+    padding: 10px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    font: 500 18px 'Poppins',sans-serif;
+
+    &:hover{
+        background: saturate($color: $cyan, $amount: 100);
+    }
+}

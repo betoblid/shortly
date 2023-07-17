@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background: rgb(26, 26, 63);
+            color: white;
+            font: 900 20px Arial;
+        }
+        .card{
+            width: 60%;
+            background: rgb(42, 42, 98);
+        }
+        input{
+            width: 70%;
+            padding: 10px;
+        }
+        button{
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="card">
+            <input type="text" id="cxtext" name="text"
+            placeholder="digite sua URL" value="https://www.youtube.com/@dieikemods413">
+            <button id="enviar">Enviar</button>
+        </div>
+        <div id="resu" class="card">
+            result
+        </div>
+    </div>
+<!--essa parte aqui foi feito para teste e esta disponivel para vcs verem como funciona essa parte não tem nada a ver com o projeto-->
+    <script>
+
+
+//pegando os elementos do dom
+
+
+        let btn = document.getElementById('enviar')
+
+        //abrindo uma function asincrona
+        async function pegar(){
+            let ular = document.getElementById('cxtext').value;
+
+            //essa parte sera mostrada um console log na url enviada pelo input
+            console.log(ular)
+
+            //a api será chamada e ja com o link do input para menor codigo
+            let api = `https://api.shrtco.de/v2/shorten?url=${ular}`;
+
+
+            //mostrara a url da api
+            console.log(api + "\n\n");
+
+
+            //mandando uma req pro servidor
+            const res = await fetch(api);
+
+            //será mostrado a resposta que a api mando
+            console.log(res + "\n\n");
+
+            //convertendo a resposta da api em json
+            const result = await res.json();
+            //const {result: {short_link} } = await res.json();
+
+            //mostrando uma estrutura em object
+            console.log(result);
+
+            //pegando dentro do object o nosso link encurtado para mostra no console
+            console.log(result.result.short_link)
+
+            //console.log(short_link)
+        }
+        
+        //colocando um evento de escuta para chamar  function
+        btn.addEventListener('click', pegar)
+    </script>
+
+
+</body>
+</html>

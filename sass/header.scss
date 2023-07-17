@@ -1,0 +1,180 @@
+@import "./variavel.scss";
+
+.container_header{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .card_logo_nav{
+        display: flex;
+        align-items: center;
+
+        nav{
+            margin-left: 30px;
+            a{
+                text-decoration: none;
+                color: $grayish_violet;
+                font: 700 14px 'Poppins', sans-serif;
+                margin: 0 10px;
+
+                &:hover{
+                    color: $very_dark_violet;
+                }
+            }
+        }
+    }    //fechamendo do card logo nav
+    .card_nav{
+
+        .nav_desktop{
+            .efect_log{
+                color: $white;
+
+                //foi feito um hover aqui para cancelar o hover dos links menu
+                &:hover{
+                    color: $white;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $grayish_violet;
+                font: 700 14px 'Poppins', sans-serif;
+                margin: 0 10px;
+
+                &:hover{
+                    color: $very_dark_violet;
+                }
+                
+            }
+        }
+    }
+    //fechamento do card nav
+}
+
+/*a sessão de entrada será editada aqui para que possa ser melhor compreendida ou seja toda a primeira tela esta cendo feito nesse arquivo des do header ate a primeira section.*/
+
+.container_topo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    width: 100%;
+    min-height: 80vh;
+
+    .card_topo_text{
+        margin-left: 9%;
+
+        h1{
+            font: 700 60px 'Poppins', sans-serif;
+            color: $very_dark_blue;
+        }
+        p{
+            font: 500 18px 'Poppins', sans-serif;
+            color: $grayish_violet;
+            margin-bottom: 5%;
+        }
+    }
+    .card_logo{
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+#nav_menu{
+    display: none;
+}
+#menu_btn{
+    display: none;
+}
+@media(max-width: 850px){
+
+    #nav_menu{
+        display: block;
+    }
+    .hidden{
+        display: none;
+    }
+    .card_nav{
+
+        #menu_btn{
+            display: inline;
+            background: none;
+            border: none;
+
+            img{
+                width: 40px;
+            
+            }
+        }
+        #nav_menu{
+
+
+            .nav_list{
+                //destacando o card para fazer o menu
+                //como estou usando o jusctify em space-around então usarei 10% no left pois o card tem 80% do tamanho
+                position: absolute;
+                top: 15%;
+                left: 10%;
+                width: calc(80% - 80px);
+                padding: 40px;
+                border-radius: 20px;
+                background: $dark_violet;
+                //alinhando os elementos no meio da tela
+                display: flex;
+                flex-flow: column wrap;
+
+                a{
+                    display: block;
+                    color: $white;
+                    padding: 15px 0;
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                    font: 700 18px 'Poppins';
+
+                    &:hover{
+                        background: $grayish_violet;
+                        border-radius: 40px;
+                        
+                    }
+                }
+
+                .logins{
+                    border-top: 0.1rem solid $grayish_violet;
+                    margin-top: 20px;
+                }
+            }
+            
+        }
+    }
+
+
+    //trocando o card topo para column para que possa ficar melhor visivel
+    .container_topo{
+        flex-flow: column-reverse wrap;
+        text-align: center;
+        
+        .card_topo_text{
+            margin-left: 0;
+            text-align: center;
+
+    
+            h1{
+                font: 700 45px 'Poppins', sans-serif;
+            }
+            p{
+                font: 500 18px 'Poppins', sans-serif;
+                margin-bottom: 7%;
+            }
+        }
+        .card_logo{
+    
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+}

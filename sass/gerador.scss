@@ -1,0 +1,206 @@
+@import "variavel.scss";
+
+.container_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, $gray 50%, $white 50%);
+
+    .card_link{
+        width: calc(80% - 80px);
+        padding: 40px;
+        background: url("../images/bg-shorten-desktop.svg") $dark_violet;
+        border-radius: 10px;
+
+        input{
+            width: 75%;
+            height: 30px;
+            padding: 10px;
+            font: 500 18px 'Poppins';
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        //o button não compartilha a class efect dos links
+        button{
+            font: 500 18px 'Poppins';
+            background: $cyan;
+            color: $white;
+            padding: 11px 3%;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+    }
+}
+
+//essa parte será feito o estilo dos cards que aparecerá quando for gerado o link curto
+.container_res{
+    margin: 20px 0 0 0;
+    width: 80%;
+
+    .card{
+        background: white;
+        margin: 15px 0;
+        border-radius: 10px;
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+
+        //estilo do input
+        #resu_url{
+            font: 500 18px 'Poppins';
+            overflow-x: auto;
+        }
+        //estilo da resposta da api
+        #resu_encurt{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+
+            #copy_text{
+                color: $cyan;
+                font: 500 18px 'Poppins';
+                
+                border: none;
+            }
+        }
+        
+        //botao responsavel por copiar os links
+        .box_btn{
+
+            #gerar{
+                cursor: pointer;
+                background-color: $cyan;
+                color: $white;
+                border: none;
+                padding: 3px 20px;
+                margin-left: 10px;
+                font: 800 18px 'Poppins';
+                border-radius: 5px;
+            }
+        }
+        
+    }
+
+}
+@media(max-width: 744px){
+
+    .container_link{
+        display: flex;
+        flex-flow: column wrap;
+    
+        .card_link{
+            width: calc(95% - 60px);
+            padding: 30px;
+            background: url("../images/bg-shorten-mobile.svg") no-repeat right top $dark_violet;
+    
+            input{
+                width: calc(100% - 25px);
+                margin-right: 0px;
+            }
+            //o button não compartilha a class efect dos links
+            button{
+                width: 100%;
+                margin-top: 4%;
+            }
+            
+        }
+    }
+
+    //responsivo do gerador de link
+    .container_res{
+        width: 95%;
+
+        .card{
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+    
+            //estilo do input
+            #resu_url{
+                border-bottom: 2px solid $gray;
+                width: 100%;
+                margin: 5px 0;
+                padding: 0 0 5px 0px;
+            }
+            //estilo da resposta da api
+            #resu_encurt{
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                
+                p{
+                    padding: 5px 0;
+                }
+                
+            }
+            //botao responsavel por copiar os links
+            .box_btn{
+              
+                #gerar{
+                    margin-left: 0px;
+                    padding: 7px 0px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 745px) and (max-width: 977px){
+
+
+    .container_link{
+
+        .card_link{
+            width: calc(80% - 40px);
+            padding: 40px 20px;
+    
+            input{
+                width: 70%;
+            }
+        }
+    }
+
+    //responsivo dos links gerados
+
+    .container_res{
+
+        .card{
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+    
+            //estilo do input
+            #resu_url{
+                border-bottom: 2px solid $gray;
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+                padding: 0 0 5px 0px;
+            }
+            //estilo da resposta da api
+            #resu_encurt{
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                
+                p{
+                    padding: 5px 0;
+                }
+                
+            }
+            //botao responsavel por copiar os links
+            .box_btn{
+              
+                #gerar{
+                    margin-left: 0px;
+                    padding: 7px 0px;
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
+}

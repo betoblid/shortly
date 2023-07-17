@@ -1,0 +1,228 @@
+@import "variavel.scss";
+
+.container_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray;
+
+    .card_text{
+        width: 60%;
+        text-align: center;
+        margin-top: 5%;
+
+        h2{
+            font: 700 36px 'Poppins';
+        }
+        p{
+            font: 500 18px 'Poppins';
+            color: $very_dark_blue;
+            margin: 1% auto;
+        }
+    }
+}
+
+//container dos cards
+
+.container_text_bene{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray;
+    padding: 5% 0;
+
+    .card_bene{
+        width: 350px;
+        min-height: 300px;
+        background: $white;
+        border-radius: 15px;
+        margin-left: 3%;
+        position: relative;
+
+        .box_img{
+            background: $dark_violet;
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: -40px;
+            left: 7%;
+        }
+
+        .box_text{
+            padding: 0 20px 40px 20px;
+
+            p{
+                margin: 10px auto;
+                font: 500 16px 'Poppins';
+            }
+            h3{
+                font: 700 20px 'Poppins';
+            }
+        }
+    }
+    //deixando um card um pouco mas abaixo que o outro
+    .card2{
+        margin-top: 5%;
+    }
+    .card3{
+        margin-top: 10%;
+   
+    }
+
+    //linha que passa de um card para o outro
+    .linha{
+        background: $cyan;
+        height: 10px;
+        width: 800px;
+        position: absolute;
+    }
+}
+
+//estilizando boost
+
+.container_boost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/bg-boost-desktop.svg") center $dark_violet;
+    padding: 5% 0;
+    color: $white;
+    text-align: center;
+
+    .card_boost{
+        font: 700 22px 'Poppins';
+
+        button{
+            margin-top: 10px;
+            padding: 3% 13%;
+        }
+    }
+}
+
+@media(max-width: 400px){
+
+    .container_text{
+
+        .card_text{
+            width: 90%;
+            padding: 10% 0;
+    
+            h2{
+                font: 700 24px 'Poppins';
+            }
+            p{
+                font: 500 15px 'Poppins';
+            }
+        }
+    }
+
+    //container dos cards
+    .container_text_bene{
+        flex-flow: column wrap;
+        padding-bottom: 50px;
+        .card_bene{
+            width: 90%;
+            min-height: 300px;
+
+            .box_img{
+                top: -30px;
+                left: 7%;
+            }
+
+            .box_text{
+                padding: 0 10px;
+            }
+        }
+        //deixando um card um pouco mas abaixo que o outro
+        .card2{
+            margin-top: 12%;
+        }
+        .card3{
+            margin-top: 15%;
+    
+        }
+
+        //linha que passa de um card para o outro
+        .linha{
+            height: 800px;
+            width: 10px;
+        }
+    }
+
+        
+    //estilizando boost responsivo
+
+    .container_boost{
+        background: url("../images/bg-boost-mobile.svg") center none $dark_violet;
+
+        .card_boost{
+            font: 700 19px 'Poppins';
+
+            button{
+                margin-top: 10px;
+                padding: 3% 10%;
+            }
+        }
+    }
+}
+
+@media(min-width: 401px) and (max-width: 900px){
+
+    .container_text{
+    
+        .card_text{
+            width: 80%;
+            margin-top: 7%;
+    
+            h2{
+                font: 700 30px 'Poppins';
+            }
+            p{
+                font: 500 16px 'Poppins';
+            }
+        }
+    }
+    
+    //container dos cards
+    
+    .container_text_bene{
+        flex-flow: column wrap;
+        background: $gray;
+        padding: 5% 0;
+    
+        //deixando um card um pouco mas abaixo que o outro
+        .card2{
+            margin-top: 7%;
+        }
+        .card3{
+            margin-top: 12%;
+       
+        }
+    
+        //linha que passa de um card para o outro
+        .linha{
+            height: 800px;
+            width: 10px;
+        }
+    }
+    
+    //estilizando boost responsivo
+
+    .container_boost{
+        background: url("../images/bg-boost-mobile.svg") center $dark_violet;
+
+        .card_boost{
+            font: 700 20px 'Poppins';
+
+            button{
+                margin-top: 10px;
+                padding: 3% 13%;
+            }
+        }
+    }
+}
+

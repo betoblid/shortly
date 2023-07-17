@@ -1,11 +1,16 @@
-# shortly - Encurta Link...
- esse site foi feito como um site de encurtar URL usando uma api esse site tem um proposito de encurtar links para melhor acesso...
+## gente esse porjeto e muito simples de se construir
+
+
+
+a function usada esta no arquivo html na parte do script super bem decumentada para todos fazerem
+
+
+projeto pego do frontendmentor.io que querer ver projetos para se treinar front end da um pulo la 
+muitos projetos legais e divertidos de se fazer.
+
 
 alguma duvida me chama no meu linkedin ou no github que posso ajudar a construir esse projeto 
 
-
-
-### Modo de usar a Aplicação
 
 
  <h1 align="center">Bem vindo a mas um projeto</h1>

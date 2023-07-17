@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="herbert souza">
+  <meta name="description" content="Shortly onde você pode encurta seus links de graça onde e quando quiser venha esperimentar e você não irar se arrepender.">
+  <title>Shortly URL shortening API Challenge</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  
+  <header>
+    <div class="container_header">
+
+      <div class="card_logo_nav">
+
+        <img src="images/logo.svg" alt="logo do site" title="logo Shortly">
+
+        <nav class="hidden">
+          <a href="#recursos">Features</a>
+          <a href="" onclick="alert('fora do ar')">Pricing</a>
+          <a href="#recursos">Resources</a>
+        </nav>
+
+      </div>
+      <div class="card_nav">
+
+        <button id="menu_btn"><img src="images/nav_bar.png" alt=""></button>
+
+        <!--essa nav ficara visivel apenas para mobile e foi feita para melhorar a manutenção no menu-->
+        <div id="nav_menu">
+
+          <div id="nav_bar" class="hidden">
+
+            <nav id="nav_list" class="nav_list">
+              <a href="#recursos">Features</a>
+              <a href="" onclick="alert('fora do ar')">Pricing</a>
+              <a href="#recursos">Resources</a>
+              <div class="logins">
+                <a href="" aria-disabled="true" onclick="alert('fora do ar')">Login</a>
+                <a href="" class="efect_log" onclick="alert('fora do ar')">Sign Up</a></div>
+            </nav>
+          </div>
+
+        </div>
+        <!--fim no nav mobile-->
+
+        <nav class="hidden nav_desktop">
+          <a href="" onclick="alert('fora do ar')">Login</a>
+          <a href="" onclick="alert('fora do ar')" class="efect_log">Sign Up</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!--parte do conteudo da pagina-->
+  <main>
+    <section id="Logo">
+
+      <div class="container_topo">
+
+        <div class="card_topo_text">
+
+          <h1>More than just shorter links</h1>
+          <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+
+          <!--link para iniciar-->
+          <a href="#recursos" class="efect_log">Get Started</a>
+
+        </div>
+
+        <div class="card_logo">
+          <img src="images/illustration-working.svg" alt="ilustração de nossa pagina" title="illustration working">
+        </div>
+      </div>
+
+    </section>
+    <!--sessão importando onde tera a interação do usuario para ser gerado um link curto -->
+    <section>
+      <div class="container_link" id="links">
+        <div class="card_link">
+          <input type="text" id="cxurl" name="urltext" placeholder="shorten a link here..." required>
+          <button id="enviar" title="click gerar URL">shorton it!</button>
+        </div>
+
+        <!--onde chegará a resposta da api.-->
+        <div id="resu" class="container_res">
+
+          <!--todos os resultados será enviado por javascript-->
+
+          
+      </div>
+    </section>
+    <!--principais recursos do encurtador um preve resumo-->
+    <section id="recursos" >
+      <div class="container_text">
+        <div class="card_text">
+          <h2>Advanced Statistics</h2>
+          <p>Track how your links are performing across the web with our 
+            advanced statistics dashboard.</p>
+        </div>
+      </div>
+      <div class="container_text_bene">
+        
+        <!--linha que cruza os cards-->
+        <div class="linha"></div>
+        <!--card brand-->
+        <div class="card_bene card1">
+
+          <div class="box_img">
+            <img src="images/icon-brand-recognition.svg" alt="brand recognition" title="brand recognition">
+          </div>
+          <div class="box_text">
+            <h3>Brand Recognition</h3>
+            <p>Boost your brand recognition with each click. Generic links don’t 
+              mean a thing. Branded links help instil confidence in your content.</p>
+          </div>
+
+        </div>
+        
+        <!--card Detailed-->
+        <div class="card_bene card2">
+          
+          <div class="box_img">
+            <img src="images/icon-detailed-records.svg" alt="detailed records" title="detailed records">
+          </div>
+          <div class="box_text">
+            <h3>Detailed Records</h3>
+            <p>Gain insights into who is clicking your links. Knowing when and where 
+              people engage with your content helps inform better decisions.</p>
+          </div>
+        </div>
+
+        
+        <!--card fully-->
+        <div class="card_bene card3">
+          <div class="box_img">
+            <img src="images/icon-fully-customizable.svg" alt="icon fully customizable" title="icon fully customizable">
+          </div>
+          <div class="box_text">
+            <h3>Fully Customizable</h3>
+            <p>Improve brand awareness and content discoverability through customizable 
+              links, supercharging audience engagement.</p>
+          </div>
+        </div>
+        <!--fim do card-->
+      </div>
+    </section>
+
+    <!--ultima sessão antes do footer-->
+    <section>
+      <div class="container_boost">
+        <div class="card_boost">
+          <h2> Boost your links today</h2>
+          <a href="#links" class="efect_log" title="gerar URL">Get Started</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--roda pe do site-->
+  <footer>
+    <div class="container_footer">
+      <div class="card_footer">
+        <ul class="list_footer">
+          <li>
+            <img src="images/logo.svg" title="logo Shortly" alt="logo do site">
+          </li>
+          <li>
+            <!--primeira lista da pagina no footer-->
+            <ul>
+              <li><h4>Features</h4></li>
+              <li><p>Link Shortening</p></li>
+              <li><p>Branded Links</p></li>
+              <li><p>Analytics</p></li>
+            </ul>
+          </li>
+          <li>
+            <!--segunda lista da pagina no footer-->
+            <ul>
+              <li><h4>Resources</h4></li>
+              <li><p>Blog</p></li>
+              <li><p>Developers</p></li>
+              <li><p>Support</p></li>
+            </ul>
+          </li>
+          <li>
+            <!--terceira lista da pagina do footer-->
+            <ul>
+              <li><h4>Company</h4></li>
+              <li><p>About</p></li>
+              <li><p>Our Team</p></li>
+              <li><p>Careers</p></li>
+              <li><p>Contact</p></li>
+            </ul>
+          </li>
+          <!--quarta lista da pagina que conta com uma sequencia de redes sociais da pagina-->
+          <li>
+            <ul class="list_redes">
+              <li><img src="images/icon-facebook.svg" alt="rede social fecebook da pagina " title="rede fecebook"></li>
+              <li><img src="images/icon-twitter.svg" alt="rede social da pagina twitter" title="rede Twitter"></li>
+              <li><img src="images/icon-pinterest.svg" alt="rede social da pagina pinterest" title="rede pinterest"></li>
+              <li><img src="images/icon-instagram.svg" alt="rede social da pagina instagram" title="rede instagram"></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container_author">
+      <h6>Desenvolvido por <a href="https://www.linkedin.com/in/herbert-souza-220268268/" target="_blank" title="Site Desenvolvido por Herbert Souza">"Herbert souza"</a></h6>
+    </div>
+  </footer>
+
+  <script src="script/functions.js"></script>
+</body>
+</html>
